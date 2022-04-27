@@ -1,0 +1,75 @@
+body {
+    background-image: linear-gradient(to bottom, rgb(14, 16, 58), rgb(40, 13, 78), white);
+    background-attachment: fixed;
+    padding:7%;
+    font-family: 'Kanit', sans-serif;
+}
+#mainDiv {
+    width: 20em;
+    background-color: rgb(227, 218, 189);
+    border-radius: 20px;
+    padding:4%;
+    top: 32%;
+    box-shadow: 3px 3px rgb(36, 33, 45), -1em 0 .4em rgb(10, 10, 75);
+    font-size: 1em;
+    margin: 0 auto;
+}
+#addPlanet {
+    font-size: 1em;
+    margin: 0 auto;
+}
+#output {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    margin: 0 auto;   
+}
+button {
+    background-color: rgb(255, 72, 0);
+    border-radius: 35px;
+    padding: 5px;
+    width: 10em;
+    font-family: 'Kanit', sans-serif;
+    font-weight:600;
+    font-size: 1em;
+    text-align: center;  
+}
+.resizebox {
+    width: 50%;
+    border-width: 2px;
+    font-size: 1em;
+    font-family:'Kanit', sans-serif;   
+}
+#confirmation{
+   color: red;
+   font-family: 'Times New Roman', Times, serif;
+}
+#calculate-button{
+    width:100%;
+}
+#astronautImg {
+    position: absolute;
+    animation-name: noGravity;
+    animation-duration: 10s;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+    top:35%;
+    left:60%;   
+}
+@keyframes noGravity {
+	0% {
+		transform: translatey(0px);
+	}
+    25% {
+		transform: translatey(-20px);
+	}
+	37% {
+		transform: translatey(0px);
+	}
+	70% {
+		transform: translatey(-85px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;600;700&display=swap" rel="stylesheet">
+
+    <link href="/style.css" rel="stylesheet">
     <meta charset="utf-8">
     <title>Astro Weight Calculator</title>
   </head>
+
   <body>
      <!-- Write your markup here  -->
+ <img src ="pictures/astrotitle.png" alt="Astro Weight Calculator title">
+ <img src= "pictures/star.png" alt="Shooting star picture">
+<div id="mainDiv" class="center">
+  <form>
+    <label for="user-weight">Enter your Weight:</label>
+       <input required id="user-weight" class="resizebox"  type="number" placeholder="Weight (lbs)"> <br><br>
 
+      <label for="planets">Choose a planet:</label>
+        <select id="planets" class="resizebox">
+        </select><br><br>
+      <button id="calculate-button" type="button"  onclick="handleClickEvent()">Calculate!</button>  
+  </form>
+</div>
+
+<img id="astronautImg" src="/pictures/astronaut.png">
+
+<br>
+<br>
+
+<p>RESULTS:</p>
+<p id="output" class="center"></p>
+<br>
+<br>
+<br>
+
+<div class="center">
+  <hr size="3" width="100%" color="grey">  
+  <br>
+  <label for="plutoDeleteCkBx">Check box to remove Pluto 
+  </label>
+  <input type="hidden" name="plutoDeleteCkBx" value="0" />
+  <input type="checkbox" id="plutoDeleteCkBx" name="plutoDeleteCkBx" onclick= "handleDeletePlutoCheckbox()">
+ 
+  <br>
+ <br>
+
+<form  id="addPlanet">
+  <p> Add to Planet list:</p>
+  <label for="addPlanetName">Planet Name:</label>
+    <input required id="addPlanetName" type="text">
+
+  <label for="addMultiplier">Multiplier:</label>
+    <input id="addMultiplier" type="number">
+  
+    <button id="addPlanetButton" type="button" onclick="handleAddPlanetClick()">Add Planet</button>
+</form>
+<p id="confirmation"></p>
+</div>
     <script src="main.js" charset="utf-8"></script>
   </body>
 </html>
