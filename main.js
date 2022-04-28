@@ -40,7 +40,7 @@ function handleAddPlanetClick(e) {
             if (checkifNum(addPlanetMultiplier)=== true){
                 const opts = document.createElement("option");
                 opts.innerHTML = addPlanet;
-                planets[addPlanet] = parseInt(addPlanetMultiplier);
+                planets[addPlanet] = parseFloat(addPlanetMultiplier);
                 document.getElementById("planets").appendChild(opts);
                 document.getElementById("confirmation").innerHTML= "Successfully added Planet "+ addPlanet + " to the list!";
  }
@@ -48,7 +48,7 @@ function handleAddPlanetClick(e) {
 }
  function handleDeletePlutoCheckbox(e) {
      //clear confirmation box
-     //document.getElementById("confirmation").innerHTML = "";
+     document.getElementById("confirmation").innerHTML = "";
      
     //if pluto check box is checked remove pluto from dropdown list and vise versa
      if (document.getElementsByTagName("option")[1].hidden === false) {
@@ -74,12 +74,12 @@ function calculateWeight(weight, planetN) {
    // 2. Write the code to return the correct weight
         let Testing = planets[planetN]
         let newWeight= planets[planetN] * weight
-        return newWeight.toFixed(2); 
+        return newWeight; 
 }
 function handleClickEvent(e) {
     //clear confirmation box and output box
-    //document.getElementById("confirmation").innerHTML = "";
-    //document.getElementById("output").innerHTML="";
+    document.getElementById("confirmation").innerHTML = "";
+    document.getElementById("output").innerHTML="";
      // 3. Create a variable called userWeight and assign the value of the user's weight. 
         let userWeight = document.getElementById("user-weight").value
 
@@ -88,7 +88,7 @@ function handleClickEvent(e) {
   
     // 5. Create a variable called result and assign the value of the new calculated weight. 
         if (checkifNum(userWeight)== true ){
-            let result = calculateWeight(parseInt(userWeight),planetName)
+            let result = calculateWeight(parseFloat(userWeight),planetName)
 
     // 6. Write code to display the message shown in the screenshot. 
         document.getElementById("output").innerHTML= "If you were on "+ planetName + ", you would weigh " + result + "lbs!";
