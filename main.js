@@ -47,6 +47,9 @@ function handleAddPlanetClick(e) {
  }
 }
  function handleDeletePlutoCheckbox(e) {
+     //clear confirmation box
+     //document.getElementById("confirmation").innerHTML = "";
+     
     //if pluto check box is checked remove pluto from dropdown list and vise versa
      if (document.getElementsByTagName("option")[1].hidden === false) {
         document.getElementsByTagName("option")[1].hidden = true;
@@ -71,9 +74,12 @@ function calculateWeight(weight, planetN) {
    // 2. Write the code to return the correct weight
         let Testing = planets[planetN]
         let newWeight= planets[planetN] * weight
-        return newWeight; 
+        return newWeight.toFixed(2); 
 }
 function handleClickEvent(e) {
+    //clear confirmation box and output box
+    //document.getElementById("confirmation").innerHTML = "";
+    //document.getElementById("output").innerHTML="";
      // 3. Create a variable called userWeight and assign the value of the user's weight. 
         let userWeight = document.getElementById("user-weight").value
 
