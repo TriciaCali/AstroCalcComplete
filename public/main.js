@@ -74,7 +74,7 @@ function calculateWeight(weight, planetN) {
    // 2. Write the code to return the correct weight
         let Testing = planets[planetN]
         let newWeight= planets[planetN] * weight
-        return newWeight.toFixed(2); 
+        return  Math.round(newWeight * 100) / 100
 }
 function handleClickEvent(e) {//when the calculate button is pushed
     //clear confirmation box and output box
